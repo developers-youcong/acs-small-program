@@ -1,0 +1,20 @@
+<!--pages/login/login.wxml-->
+<view class='container'>
+  <view class='header'>
+    <text>acs系统</text>
+  </view>
+  <form bindsubmit="formSubmit">
+    <view class='section'>
+      <text>用户名：</text>
+      <input type='text' name="email" placeholder='请输入邮箱'/>
+    </view>
+    <view class='section'>
+      <text>密码:</text>
+      <input password='password' name="pwd" placeholder='请输入密码'/>
+    </view>
+    <view class='button'>
+      <button type='primary' form-type='submit'>登录</button>
+    </view>
+  </form>
+
+</view>
