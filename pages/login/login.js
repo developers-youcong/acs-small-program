@@ -59,7 +59,7 @@ Page({
                 duration: 2000,
                 success: function () {
                   wx.navigateTo({
-                    url: '../index/index'
+                    url: '../manage/manage'
                   })
 
                   wx.setStorage({

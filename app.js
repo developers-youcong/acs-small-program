@@ -37,7 +37,7 @@ App({
     appid: 'wx229dfe5b7d7efd4c',//appid  
     secret: '810c75f01fb0d3ca7ee19752bfb21cc4',//secret
     userInfo: null,
-    urlPath:"http://47.94.172.106:8090/acs-admin/",
+    urlPath:"https://www.youcongtech.com/acs-admin/",
     openid: wx.getStorageSync('userId')
   }
 })
