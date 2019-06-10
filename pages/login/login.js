@@ -66,6 +66,12 @@ Page({
                     key: 'userId',
                     data: res.data.user.userCode
                   })
+
+                  wx.setStorage({
+                    key: 'userName',
+                    data: res.data.user.userName
+                  })
+                  console.log("test:" + wx.getStorageSync('userName'));
                 }
               })
 

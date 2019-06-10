@@ -1,14 +1,12 @@
 // pages/manage/manage.js
 Page({
-  data: {
-    userId: wx.getStorageSync('userId'),
-    userInfo: {}
-  },
+
   /**
    * 页面的初始数据
    */
   data: {
-    
+    userName: wx.getStorageSync('userName'),
+    userInfo: {}
   },
 
   /**

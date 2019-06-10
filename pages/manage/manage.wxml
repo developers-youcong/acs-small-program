@@ -1,5 +1,5 @@
 <view class="section btn-area">
-  <view class="section__title">欢迎{{userId}}来到ACS管理系统</view>
+  <view class="section__title">欢迎{{userName}}来到ACS管理系统</view>
   <view>
     <text>\n</text>
   </view>
