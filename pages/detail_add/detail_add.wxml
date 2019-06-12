@@ -1,0 +1,41 @@
+<view style="text-align:center"> {{title}} </view>
+<view>添加支出详情信息</view>
+<view>
+  <text>\n</text>
+</view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <view class="section__title">支出金额</view>
+    <input name="input" placeholder="请输入支出金额" />
+  </view>
+  <view>
+    <text>\n</text>
+  </view>
+
+
+  <view class="section">
+    <view class="section__title">支出类型</view>
+    <input name="input" placeholder="请输入支出类型" />
+  </view>
+  <view>
+    <text>\n</text>
+  </view>
+  <view class="section">
+    <view class="section__title">创建时间</view>
+    <input name="input" placeholder="请输入创建时间" />
+  </view>
+  <view>
+    <text>\n</text>
+  </view>
+  <view class="section">
+    <view class="section__title">备注</view>
+    <textarea bindblur="bindTextAreaBlur" auto-height placeholder="请输入备注" />
+  </view>
+  <view>
+    <text>\n</text>
+  </view>
+  <view class="btn-area">
+    <button form-type="submit">Submit</button>
+    <button form-type="reset">Reset</button>
+  </view>
+</form>

@@ -1,3 +1,31 @@
 <!-- redirect.wxml -->
 <view style="text-align:center"> {{title}} </view>
-<view> 点击左上角返回回到上级页面 </view>
+<view>支出详情</view>
+<view>
+  <text>\n</text>
+</view>
+<view>
+  <view>
+    <navigator url="/pages/detail_add/detail_add" hover-class="navigator-hover">添加支出详情信息</navigator>
+  </view>
+  <view>
+    <text>\n</text>
+  </view>
+  <view>
+    <view>
+      <text>列表数据</text>
+       <text>\n</text>
+    </view>
+    <view class="table">
+
+      <view class="tr">
+        <view class="th">支出类型</view>
+        <view class="th">支出金额</view>
+        <view class="th">创建时间</view>
+        <view class="th">修改时间</view>
+        <view class="th">备注</view>
+        <view class="th">操作</view>
+      </view>
+    </view>
+  </view>
+</view>

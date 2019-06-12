@@ -5,7 +5,8 @@
     "pages/logs/logs",
     "pages/manage/manage",
     "pages/type/type",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/detail_add/detail_add"
   ],
   "window": {
     "backgroundTextStyle": "light",

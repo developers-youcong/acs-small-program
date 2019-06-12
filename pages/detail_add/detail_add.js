@@ -1,45 +1,28 @@
-// pages/detail/detail.js
+// pages/detail_add/detail_add.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    height: 20,
+    focus: false
   },
-
+  bindButtonTap: function () {
+    this.setData({
+      focus: true
+    })
+  },
+  bindTextAreaBlur: function (e) {
+    console.log(e.detail.value)
+  },
+  bindFormSubmit: function (e) {
+    console.log(e.detail.value.textarea)
+  },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    var _this = this;
-    var userCode = "1";
-    var pageNo = 1;
-    var pageSize = 10;
-
-    wx.request({
-      url: getApp().globalData.urlPath + "/spendingDetail/list",//json数据地址 
-      data: {
-        userCode: userCode,
-        pageNo: pageNo,
-        pageSize: pageSize
-        },
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      success: function (res) {
-
-        console.log(res.data.code);
-        console.log(res.data.msg)
-        console.log(res.data.totalSize);
-
-        // _this.setData({
-        //   list_data: res.data.datas,
-        //   //res代表success函数的事件对，data是固定的，imgListData是上面json数据中imgListData
-        // })
-      }
-    })
-
 
   },
 
