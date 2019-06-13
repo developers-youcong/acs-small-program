@@ -6,7 +6,7 @@
 <form bindsubmit="formSubmit" bindreset="formReset">
   <view class="section">
     <view class="section__title">支出金额</view>
-    <input name="input" placeholder="请输入支出金额" />
+    <input name="input" name="amount" placeholder="请输入支出金额" />
   </view>
   <view>
     <text>\n</text>
@@ -15,27 +15,51 @@
 
   <view class="section">
     <view class="section__title">支出类型</view>
-    <input name="input" placeholder="请输入支出类型" />
+    <input name="input" name="typeId" placeholder="请输入支出类型" />
   </view>
+  <view class="section">
+    <text>\n</text>
+  </view>
+  <view>
+    <text>创建时间</text>
+    <text>\n</text>
+    <view class="section">
+      <view class="section__title">选择日期</view>
+      <picker mode="date" value="{{date}}" start="2018-09-01" end="2030-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          当前选择: {{date}}
+        </view>
+      </picker>
+    </view>
+    <text>\n</text>
+    <view class="section">
+      <view class="section__title">选择时间</view>
+      <picker mode="time" value="{{time}}" start="00:00=" end="23:59" bindchange="bindTimeChange">
+        <view class="picker">
+          当前选择: {{time}}
+        </view>
+      </picker>
+    </view>
+  </view>
+
   <view>
     <text>\n</text>
   </view>
-  <view class="section">
-    <view class="section__title">创建时间</view>
-    <input name="input" placeholder="请输入创建时间" />
-  </view>
+ <view class="section">
+  <view class="section__title">备注</view>
+  <textarea bindblur="bindTextAreaBlur" value="默认" auto-height placeholder="请输入备注" />
+</view>
   <view>
     <text>\n</text>
-  </view>
-  <view class="section">
-    <view class="section__title">备注</view>
-    <textarea bindblur="bindTextAreaBlur" auto-height placeholder="请输入备注" />
   </view>
   <view>
     <text>\n</text>
   </view>
   <view class="btn-area">
     <button form-type="submit">Submit</button>
+    <view>
+      <text>\n</text>
+    </view>
     <button form-type="reset">Reset</button>
   </view>
 </form>
