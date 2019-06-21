@@ -8,7 +8,7 @@ Page({
     height: 20,
     focus: false
   },
-  formSubmit: function (e) {
+  formSubmit: function(e) {
     console.log('form发生了submit事件，携带数据为：' + e.detail.value.amount + ", " + e.detail.value.typeId + ", " + this.data.remark + ", " + this.data.date + ", " + this.data.time);
 
     var amount = e.detail.value.amount;
@@ -16,8 +16,10 @@ Page({
     var date = this.data.date;
     var time = this.data.time;
     var remark = this.data.remark;
-    var createDate = date + time;
-    console.log("createDate:"+createDate.toString())
+    var createDate = date + " " + time;
+    console.log("date:" + date);
+    console.log("time:" + time);
+    console.log("createDate:" + createDate)
     if (amount == null || amount == "") {
       wx.showToast({
         title: "支出金额不能为空",
@@ -52,6 +54,7 @@ Page({
     } else {
 
 
+
       wx.request({
 
         url: getApp().globalData.urlPath + "spendingDetail/add",
@@ -63,9 +66,9 @@ Page({
           remark: remark
         },
         header: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/x-www-form-urlencoded"
         },
-        success: function (res) {
+        success: function(res) {
           console.log(res.data.code);
           if (res.statusCode == 200) {
 
@@ -74,14 +77,12 @@ Page({
               wx.showToast({
                 title: "添加支出详情成功",
                 icon: 'success',
-                duration: 2000,
-                success: function () {
+                duration: 3000,
+                success: function() {
 
-
-
-
-
-
+                  wx.navigateTo({
+                    url: '../detail/detail'
+                  })
                 }
               })
 
@@ -93,7 +94,7 @@ Page({
               fail
             })
 
-            setTimeout(function () {
+            setTimeout(function() {
               wx.hideLoading()
             }, 2000)
           }
@@ -104,21 +105,21 @@ Page({
 
 
   },
-  formReset: function () {
+  formReset: function() {
     console.log('form发生了reset事件')
   },
-  bindTextAreaBlur: function (e) {
+  bindTextAreaBlur: function(e) {
     this.setData({
       remark: e.detail.value
     })
   },
-  bindDateChange: function (e) {
+  bindDateChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       date: e.detail.value
     })
   },
-  bindTimeChange: function (e) {
+  bindTimeChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
     this.setData({
       time: e.detail.value
@@ -127,56 +128,56 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
 
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })
