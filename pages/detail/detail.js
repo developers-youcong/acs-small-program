@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    post_key:""
+    
   },
 
   /**
@@ -14,29 +15,22 @@ Page({
   onLoad: function (options) {
     var _this = this;
     var userCode = "1";
-    var pageNo = 1;
-    var pageSize = 10;
-
+    var self = this
     wx.request({
-      url: getApp().globalData.urlPath + "/spendingDetail/list",//json数据地址 
+      url: getApp().globalData.urlPath + "spendingDetail/recentList",//json数据地址 
       data: {
-        userCode: userCode,
-        pageNo: pageNo,
-        pageSize: pageSize
+        userCode: userCode
         },
       headers: {
-        'Content-Type': 'application/json'
+        "Content-Type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
+        self.setData({
 
-        console.log(res.data.code);
-        console.log(res.data.msg)
-        console.log(res.data.totalSize);
+          post_key: res.data.list
 
-        // _this.setData({
-        //   list_data: res.data.datas,
-        //   //res代表success函数的事件对，data是固定的，imgListData是上面json数据中imgListData
-        // })
+        });//等同于
+  
       }
     })
 

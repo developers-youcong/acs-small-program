@@ -14,18 +14,15 @@
   <view>
     <view>
       <text>列表数据</text>
-       <text>\n</text>
+      <text>\n</text>
     </view>
-    <view class="table">
+    <view>
+      <block wx:for="{{post_key}}" wx:for-item="item">
+        <swiper-item class="banner">
 
-      <view class="tr">
-        <view class="th">支出类型</view>
-        <view class="th">支出金额</view>
-        <view class="th">创建时间</view>
-        <view class="th">修改时间</view>
-        <view class="th">备注</view>
-        <view class="th">操作</view>
-      </view>
+          <text class="banner-title">{{item.remark}}</text>
+        </swiper-item>
+      </block>
     </view>
   </view>
 </view>
