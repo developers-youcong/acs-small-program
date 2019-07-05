@@ -1,16 +1,24 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+ <view class="table">
+    <view class="tr thead">
+      <view class="td">今日总支出</view>
+      <view class="td">昨日总支出</view>
+      <view class="td ">最近7天总支出</view>
+      <view class="td">最近15天总支出</view>
+      <view class="td">本月总支出</view>
+      <view class="td ">上个月总支出</view>
+    </view>
+    <block>
+      <view class="tr">
+        <view class="td">{{totalCount}}</view>
+        <view class="td">{{yesterDaySpendingTotal}}</view>
+        <view class="td">{{recentSevenDaysSpendingTotal}}</view>
+        <view class="td">{{recentFiftenDaysSpendingTotal}}</view>
+        <view class="td">{{currentMonthTotalCount}}</view>
+        <view class="td">{{lastMonthSpendingTotal}}</view>
+      </view>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-    
-  </view>
 
- 
 </view>
