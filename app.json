@@ -6,7 +6,8 @@
     "pages/manage/manage",
     "pages/type/type",
     "pages/detail/detail",
-    "pages/detail_add/detail_add"
+    "pages/detail_add/detail_add",
+    "pages/type_add/type_add"
   ],
   "window": {
     "backgroundTextStyle": "light",
