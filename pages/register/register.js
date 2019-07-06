@@ -77,11 +77,55 @@ Page({
         duration: 1500
       })
     }else{
-      wx.showToast({
-        title: "注册成功",
-        icon: 'none',
-        duration: 1500
+
+
+      wx.request({
+
+        url: getApp().globalData.urlPath + "sysUser/register",
+        method: "POST",
+        data: {
+          amount: amount,
+          typeId: typeId,
+          createDate: createDate,
+          remark: remark
+        },
+        header: {
+          "Content-Type": "application/x-www-form-urlencoded"
+        },
+        success: function (res) {
+          console.log(res.data.code);
+          if (res.statusCode == 200) {
+
+            //访问正常
+            if (res.data.code == "000000") {
+              wx.showToast({
+                title: "注册成功，马上回到登录界面",
+                icon: 'success',
+                duration: 3000,
+                success: function () {
+
+                  wx.navigateTo({
+                    url: '../login/login'
+                  })
+                }
+              })
+
+            }
+          } else {
+
+            wx.showLoading({
+              title: '系统异常',
+              fail
+            })
+
+            setTimeout(function () {
+              wx.hideLoading()
+            }, 2000)
+          }
+
+        }
       })
+
     }
 
 

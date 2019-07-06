@@ -1,35 +1,47 @@
-<form bindsubmit="formSubmit" bindreset="formReset">
-  <view class="section">
-    <text>邮箱</text>
-    <input name="email" placeholder="请输入邮箱" />
+<view class='container'>
+  <view class='header'>
+    <text>注册界面</text>
   </view>
-  <view class="section">
-    <text>手机号</text>
-    <input name="mobile" placeholder="请输入手机号" />
+  <view>
+    <text>\n</text>
   </view>
-  <view class="section">
-    <text>用户名</text>
-    <input name="userName" placeholder="请输入用户名" />
-  </view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="section">
+      <text>邮箱</text>
+      <input name="email" placeholder="请输入邮箱" />
+    </view>
+    <view class="section">
+      <text>手机号</text>
+      <input name="mobile" placeholder="请输入手机号" />
+    </view>
+    <view class="section">
+      <text>用户名</text>
+      <input name="userName" placeholder="请输入用户名" />
+    </view>
 
-  <view class="section">
-    <text>密码</text>
-    <input type="password" name="pwd" placeholder="请输入密码" />
-  </view>
+    <view class="section">
+      <text>密码</text>
+      <input type="password" name="pwd" placeholder="请输入密码" />
+    </view>
 
-   <view class="section">
-    <text>确认密码</text>
-    <input type="password" name="reply_pwd" placeholder="请输入确认密码" />
-  </view>
-  <view class="section section_gap">
-    <text>性别</text>
-    <radio-group name="radio-group" bindchange="radioChange">
-      <label><radio name="sex" value="0"/>男</label>
-      <label><radio name="sex" value="1"/>女</label>
-    </radio-group>
-  </view>
-  <view class="btn-area">
-    <button form-type="submit">Submit</button>
-    <button form-type="reset">Reset</button>
-  </view>
-</form>
+    <view class="section">
+      <text>确认密码</text>
+      <input type="password" name="reply_pwd" placeholder="请输入确认密码" />
+    </view>
+    <view class="section section_gap">
+      <text>性别</text>
+      <radio-group name="radio-group" bindchange="radioChange">
+        <label>
+          <radio name="sex" value="0" />男</label>
+        <label>
+          <radio name="sex" value="1" />女</label>
+      </radio-group>
+    </view>
+    <view class="btn-area">
+      <text>\n</text>
+      <button form-type="submit">提交</button>
+      <text>\n</text>
+      <button form-type="reset">重置</button>
+    </view>
+  </form>
+</view>

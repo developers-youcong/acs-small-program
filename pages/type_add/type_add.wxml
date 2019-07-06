@@ -26,10 +26,10 @@
     <text>\n</text>
   </view>
   <view class="btn-area">
-    <button form-type="submit">Submit</button>
+    <button form-type="submit">提交</button>
     <view>
       <text>\n</text>
     </view>
-    <button form-type="reset">Reset</button>
+    <button form-type="reset">重置</button>
   </view>
 </form>

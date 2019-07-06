@@ -3,6 +3,11 @@
   <view class='header'>
     <text>acs系统</text>
   </view>
+    <view>
+    <text>\n</text>
+  </view>
+  <view class='header'>
+  </view>
   <form bindsubmit="formSubmit">
     <view class='section'>
       <text>用户名：</text>
