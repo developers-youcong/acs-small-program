@@ -25,6 +25,7 @@ Page({
         "Content-Type": "application/x-www-form-urlencoded"
       },
       success: function (res) {
+
         self.setData({
 
           post_key: res.data.list

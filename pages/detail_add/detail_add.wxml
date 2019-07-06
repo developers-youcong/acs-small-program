@@ -20,17 +20,12 @@
   <view class="section">
     <view class="section__title">支出类型</view>
     <text>\n</text>
-    <view class="page">
-      <view class='select_box'>
-        <view class='select' catchtap='selectTap'>
-          <text class='select_text'>{{selectData[index]}}</text>
-
-        </view>
-        <view class='option_box' style='height:{{selectShow?(selectData.length>5?325:selectData.length*50):0}}rpx;'>
-          <text class='option' wx:for='{{selectData}}' wx:key='this' data-index='{{index}}' catchtap='optionTap'>{{item}}</text>
-        </view>
-      </view>
-    </view>
+    <checkbox-group bindchange="checkboxChange">
+  <label class="checkbox" wx:for="{{selectData}}">
+    <checkbox value="{{item.typeId}}" checked="{{item.checked}}"/>{{item.typeName}}
+  </label>
+  <text>\n</text>
+</checkbox-group>
 
   </view>
 
@@ -64,7 +59,7 @@
   </view>
   <view class="section">
     <view class="section__title">备注</view>
-    <textarea bindblur="bindTextAreaBlur" value="默认" auto-height placeholder="请输入备注" />
+   <input name="input" name="remark" value="test" placeholder="请输入备注" />
   </view>
   <view>
     <text>\n</text>
