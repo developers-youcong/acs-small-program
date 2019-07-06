@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    types: ""
   },
 
   /**
@@ -13,6 +13,25 @@ Page({
    */
   onLoad: function (options) {
 
+    var userCode = wx.getStorageSync('userId');
+    var self = this
+    wx.request({
+      url: getApp().globalData.urlPath + "spendingType/types",//json数据地址 
+      data: {
+        userCode: userCode
+      },
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+      },
+      success: function (res) {
+        self.setData({
+
+          types: res.data.data
+
+        });//等同于
+
+      }
+    })
   },
 
   /**

@@ -18,7 +18,7 @@
     </view>
 <view class="table">
         <view class="tr thead">
-          <view class="td">支出类型</view>
+          <view class="td">类型名</view>
           <view class="td">支出金额</view>
           <view class="td ">创建时间</view>
           <view class="td">修改时间</view>

@@ -1,3 +1,41 @@
-<!-- navigator.wxml -->
+<!-- redirect.wxml -->
 <view style="text-align:center"> {{title}} </view>
-<view> 点击左上角返回回到之前页面 </view>
+<view>支出类型</view>
+<view>
+  <text>\n</text>
+</view>
+<view>
+  <view>
+    <navigator url="/pages/type_add/type_add" hover-class="navigator-hover">添加支出类型信息</navigator>
+  </view>
+  <view>
+    <text>\n</text>
+  </view>
+  <view>
+    <view>
+      <text>列表数据</text>
+      <text>\n</text>
+    </view>
+<view class="table">
+        <view class="tr thead">
+          <view class="td">类型名</view>
+          <view class="td">创建时间</view>
+          <view class="td ">修改时间</view>
+          <view class="td">备注</view>
+          <view class="td ">操作</view>
+        </view>
+        <block>
+          <view class="tr" wx:for="{{types}}" wx:for-item="item">
+            <view class="td">{{item.typeName}}</view>
+            <view class="td">{{item.createDate}}</view>
+            <view class="td">{{item.modifyDate}}</view>
+            <view class="td">{{item.remark}}</view>
+            <view class="td">正在开发中</view>
+          </view>
+        </block>
+      </view>
+
+ 
+
+  </view>
+</view>
