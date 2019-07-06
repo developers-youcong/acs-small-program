@@ -40,11 +40,8 @@
     </view>
   </view>
   <view class="section">
-    <view class="section__title">备注</view>
+    <text>备注</text>
     <input name="input" name="remark" placeholder="请输入备注" />
-  </view>
-  <view>
-    <text>\n</text>
   </view>
   <view>
     <text>\n</text>
