@@ -6,14 +6,16 @@
   <form bindsubmit="formSubmit">
     <view class='section'>
       <text>用户名：</text>
-      <input type='text' name="email" placeholder='请输入邮箱'/>
+      <input type='text' name="email" placeholder='请输入邮箱' />
     </view>
     <view class='section'>
       <text>密码:</text>
-      <input password='password' name="pwd" placeholder='请输入密码'/>
+      <input password='password' name="pwd" placeholder='请输入密码' />
     </view>
     <view class='button'>
       <button type='primary' form-type='submit'>登录</button>
+      <text>\n</text>
+       <view bindtap='register' class="register">注册</view>
     </view>
   </form>
 

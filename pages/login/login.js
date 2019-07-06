@@ -9,6 +9,12 @@ Page({
     password: ""
 
   },
+   register:function(e){
+    wx.navigateTo({
+      url: '../register/register'
+    })
+
+  },
   formSubmit: function(e) {
     console.log(e.detail.value.email);
     console.log(e.detail.value.pwd)

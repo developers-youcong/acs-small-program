@@ -21,3 +21,11 @@ form text{
   font-size: 20px;
   color: #666;
 }
+.register{
+color:black;
+display: block;
+width: 310px;
+height: 40px;
+border: 1px solid #ccc;
+text-align: center;
+}
