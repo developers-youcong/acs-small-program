@@ -84,10 +84,11 @@ Page({
         url: getApp().globalData.urlPath + "sysUser/register",
         method: "POST",
         data: {
-          amount: amount,
-          typeId: typeId,
-          createDate: createDate,
-          remark: remark
+          email: email,
+          mobile: mobile,
+          userName: userName,
+          pwd: pwd,
+          sex:sex
         },
         header: {
           "Content-Type": "application/x-www-form-urlencoded"
