@@ -1,26 +1,19 @@
 <view style="text-align:center"> {{title}} </view>
-<view>添加支出类型信息</view>
+ <view class='header'>
+    <text>添加支出类型信息</text>
+  </view>
 <view>
   <text>\n</text>
 </view>
 <form bindsubmit="formSubmit" bindreset="formReset">
   <view class="section">
-    <view class="section__title">类型名</view>
+    <text>类型名</text>
     <input name="input" name="typeName" placeholder="请输入类型名" />
   </view>
-  <view>
-    <text>\n</text>
-  </view>
 
-  <view>
-    <text>\n</text>
-  </view>
   <view class="section">
-    <view class="section__title">备注</view>
-   <input name="input" name="remark" value="test" placeholder="请输入备注" />
-  </view>
-  <view>
-    <text>\n</text>
+    <text>备注</text>
+   <input name="input" name="remark" placeholder="请输入备注" />
   </view>
   <view>
     <text>\n</text>
