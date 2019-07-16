@@ -13,6 +13,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    wx.setNavigationBarTitle({
+
+      title: "支出详情列表"
+
+    })
+
     var self = this
     var userId = wx.getStorageSync('userId');
     console.log("userId:" + userId);
@@ -35,6 +42,11 @@ Page({
   
       }
     })
+
+
+  },
+  onClick:function(){
+
 
 
   },

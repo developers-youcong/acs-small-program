@@ -20,6 +20,10 @@ Page({
   },
   onLoad: function () {
     
+    wx.setNavigationBarTitle({
+      title: "统计分析"
+    })
+
     var userCode = wx.getStorageSync('userId').toString();
    
     console.log("userCode:"+userCode);

@@ -1,9 +1,3 @@
-<!-- redirect.wxml -->
-<view style="text-align:center"> {{title}} </view>
-<view>支出类型</view>
-<view>
-  <text>\n</text>
-</view>
 <view>
   <view>
     <navigator url="/pages/type_add/type_add" hover-class="navigator-hover">添加支出类型信息</navigator>

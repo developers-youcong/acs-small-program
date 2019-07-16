@@ -1,9 +1,3 @@
-<!-- redirect.wxml -->
-<view style="text-align:center"> {{title}} </view>
-<view>支出详情</view>
-<view>
-  <text>\n</text>
-</view>
 <view>
   <view>
     <navigator url="/pages/detail_add/detail_add" hover-class="navigator-hover">添加支出详情信息</navigator>
@@ -32,7 +26,11 @@
             <view class="td">{{item.createDate}}</view>
             <view class="td">{{item.modifyDate}}</view>
             <view class="td">{{item.remark}}</view>
-            <view class="td">正在开发中</view>
+            <view class="td">
+             <button class='btn1'>
+                <view>删除</view>
+            </button>
+            </view>
           </view>
         </block>
       </view>

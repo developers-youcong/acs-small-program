@@ -22,6 +22,24 @@ Page({
     var sex = this.data.sex;
     var emailReg = /^[A-Za-z\d]+([-_.][A-Za-z\d]+)*@([A-Za-z\d]+[-.])+[A-Za-z\d]{2,4}$/;
     var mobileReg = /^1([38][0-9]|4[579]|5[0-3,5-9]|6[6]|7[0135678]|9[89])\d{8}$/;
+   
+   var data = {
+
+     email: email,
+     mobile: mobile,
+     userName: userName,
+     pwd: pwd,
+     sex: sex
+
+   }
+
+   console.log("====================start==============================")
+   console.log("email:"+email);
+   console.log("mobile:"+mobile);
+   console.log("userName:"+userName);
+   console.log("pwd:"+pwd)
+   console.log("sex:"+sex);
+   console.log("====================end================================")
     if(email == null || email == ""){
       wx.showToast({
         title: "邮箱不能为空",
@@ -78,18 +96,13 @@ Page({
       })
     }else{
 
+      console.log(data);
 
       wx.request({
 
         url: getApp().globalData.urlPath + "sysUser/register",
         method: "POST",
-        data: {
-          email: email,
-          mobile: mobile,
-          userName: userName,
-          pwd: pwd,
-          sex:sex
-        },
+        data: data,
         header: {
           "Content-Type": "application/x-www-form-urlencoded"
         },
