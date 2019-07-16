@@ -27,9 +27,9 @@
             <view class="td">{{item.modifyDate}}</view>
             <view class="td">{{item.remark}}</view>
             <view class="td">
-             <button class='btn1'>
-                <view>删除</view>
-            </button>
+             <text bindtap='editDetail' data-id="{{item.detailId}}">编辑</text>
+             <text>\n</text>
+             <text bindtap='delDetail' data-id="{{item.detailId}}">删除</text>
             </view>
           </view>
         </block>

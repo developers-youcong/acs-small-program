@@ -45,10 +45,17 @@ Page({
 
 
   },
-  onClick:function(){
+  editDetail:function(e){
+    let detailId = e.currentTarget.dataset['id'];
+    console.log("detailId:" + detailId);
 
-
-
+    wx.navigateTo({
+      url: '../editDetail/editDetail?detailId='+detailId
+    })
+  },
+  delDetail:function(e){
+    let detailId = e.currentTarget.dataset['id'];
+    console.log("detailId:" + detailId);
   },
 
   /**
