@@ -6,7 +6,6 @@ Page({
    */
   data: {
     post_key:""
-    
   },
 
   /**
@@ -56,6 +55,66 @@ Page({
   delDetail:function(e){
     let detailId = e.currentTarget.dataset['id'];
     console.log("detailId:" + detailId);
+
+    wx.showModal({
+      title: '提示',
+      content: '确认要删除该支出详情?',
+      success: function (res) {
+        if (res.confirm) {
+          console.log('用户点击确定')
+
+          wx.request({
+
+            url: getApp().globalData.urlPath + "spendingDetail/delete",
+            method: "POST",
+            data: {
+              detailId: detailId
+            },
+            header: {
+              "Content-Type": "application/x-www-form-urlencoded"
+            },
+            success: function (res) {
+              console.log(res.data.code);
+              if (res.statusCode == 200) {
+
+                //访问正常
+                if (res.data.code == "000000") {
+                  wx.showToast({
+                    title: "删除成功，返回支出详情列表",
+                    icon: 'success',
+                    duration: 3000,
+                    success: function () {
+
+                      wx.navigateTo({
+                        url: '../detail/detail'
+                      })
+                    }
+                  })
+
+                }
+              } else {
+
+                wx.showLoading({
+                  title: '系统异常',
+                  fail
+                })
+
+                setTimeout(function () {
+                  wx.hideLoading()
+                }, 2000)
+              }
+
+            }
+          })
+
+
+        } else if (res.cancel) {
+          console.log('用户点击取消')
+        }
+      }
+    })
+
+
   },
 
   /**
