@@ -1,0 +1,23 @@
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <text>类型名</text>
+     <input name="input" name="userId" hidden="true" value="{{typeInfo.userId}}"/>
+    <input name="input" name="typeId" hidden="true" value="{{typeInfo.typeId}}"/>
+    <input name="input" name="typeName" value="{{typeInfo.typeName}}" placeholder="请输入类型名" />
+  </view>
+
+  <view class="section">
+    <text>备注</text>
+   <input name="input" name="remark" value="{{typeInfo.remark}}" placeholder="请输入备注" />
+  </view>
+  <view>
+    <text>\n</text>
+  </view>
+  <view class="btn-area">
+    <button form-type="submit">提交</button>
+    <view>
+      <text>\n</text>
+    </view>
+    <button form-type="reset">重置</button>
+  </view>
+</form>

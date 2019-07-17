@@ -7,9 +7,14 @@ Page({
   data: {
     types: ""
   },
-  editDetail: function (e) {
+  editType: function (e) {
      var typeId =  e.currentTarget.dataset['id'];
      console.log("edit:"+typeId);
+
+
+    wx.navigateTo({
+      url: '../type_edit/type_edit?typeId=' + typeId
+    })
   },
   delType:function(e){
 

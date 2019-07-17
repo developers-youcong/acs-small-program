@@ -9,7 +9,8 @@
     "pages/detail_add/detail_add",
     "pages/type_add/type_add",
     "pages/register/register",
-    "pages/editDetail/editDetail"
+    "pages/editDetail/editDetail",
+    "pages/type_edit/type_edit"
   ],
   "window": {
     "backgroundTextStyle": "light",
