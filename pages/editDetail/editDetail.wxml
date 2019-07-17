@@ -1,2 +1,51 @@
-<!--pages/editDetail/editDetail.wxml-->
-<text>pages/editDetail/editDetail.wxml</text>
+
+<view>
+<form bindsubmit="formSubmit" bindreset="formReset">
+  <view class="section">
+    <text>支出金额</text>
+    <input name="input" name="amount" placeholder="请输入支出金额" value="{{detailInfo.amount}}" />
+  </view>
+
+  <view class="section">
+    <text>支出类型</text>
+    <checkbox-group bindchange="checkboxChange">
+      <label class="checkbox" wx:for="{{selectData}}">
+        <checkbox value="{{item.typeId}}" checked="{{item.checked}}" />{{item.typeName}}
+      </label>
+    </checkbox-group>
+
+  </view>
+
+  <view>
+    <text>创建时间</text>
+    <view class="section">
+      <picker mode="date" value="{{date}}" start="2018-09-01" end="2030-09-01" bindchange="bindDateChange">
+        <view class="picker">
+          选择日期:{{date}}
+        </view>
+      </picker>
+    </view>
+    <view class="section">
+      <picker mode="time" value="{{time}}" start="00:00=" end="23:59" bindchange="bindTimeChange">
+        <view class="picker">
+          选择时间: {{time}}
+        </view>
+      </picker>
+    </view>
+  </view>
+  <view class="section">
+    <text>备注</text>
+    <input name="input" name="remark" placeholder="请输入备注" />
+  </view>
+  <view>
+    <text>\n</text>
+  </view>
+  <view class="btn-area">
+    <button form-type="submit">提交</button>
+    <view>
+      <text>\n</text>
+    </view>
+    <button form-type="reset">重置</button>
+  </view>
+</form>
+</view>

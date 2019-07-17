@@ -29,6 +29,7 @@
             <view class="td">
              <text bindtap='editDetail' data-id="{{item.detailId}}">编辑</text>
              <text>\n</text>
+             <text>\n</text>
              <text bindtap='delDetail' data-id="{{item.detailId}}">删除</text>
             </view>
           </view>

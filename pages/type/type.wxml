@@ -24,7 +24,12 @@
             <view class="td">{{item.createDate}}</view>
             <view class="td">{{item.modifyDate}}</view>
             <view class="td">{{item.remark}}</view>
-            <view class="td">正在开发中</view>
+            <view class="td">
+              <text bindtap='editType' data-id="{{item.typeId}}">编辑</text>
+              <text>\n</text>
+              <text>\n</text>
+              <text bindtap='delType' data-id="{{item.typeId}}">删除</text>
+            </view>
           </view>
         </block>
       </view>
