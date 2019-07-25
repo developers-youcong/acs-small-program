@@ -86,11 +86,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.setNavigationBarTitle({
+    // wx.setNavigationBarTitle({
 
-      title: "支出类型列表"
+    //   title: "支出类型列表"
 
-    })
+    // })
     var userCode = wx.getStorageSync('userId');
     var self = this
     wx.request({
