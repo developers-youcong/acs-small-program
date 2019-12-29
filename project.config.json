@@ -15,7 +15,7 @@
 	"compileType": "miniprogram",
 	"libVersion": "2.6.5",
 	"appid": "wx229dfe5b7d7efd4c",
-	"projectname": "acs",
+	"projectname": "acs-small-program",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

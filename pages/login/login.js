@@ -44,7 +44,7 @@ Page({
     } else {
       wx.request({
 
-        url: getApp().globalData.urlPath + "sysUser/login",
+        url: getApp().globalData.urlPath + "users/login",
         method: "POST",
         data: {
           username: username,
